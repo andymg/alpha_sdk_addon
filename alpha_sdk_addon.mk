@@ -11,8 +11,7 @@ PRODUCT_SDK_ADDON_NAME := alpha_sdk_addon
 PRODUCT_SDK_ADDON_COPY_FILES := \
 	$(LOCAL_PATH)/source.properties:source.properties \
 	$(LOCAL_PATH)/manifest.ini:manifest.ini \
-	$(LOCAL_PATH)/hardware.ini:hardware.ini \
-	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/skins/MrknHvgaMdpi,skins/MrknHvgaMdpi)
+	$(LOCAL_PATH)/hardware.ini:hardware.ini
 
 
 # Copy the jar files for the libraries (APIs) exposed in this add-on's SDK
@@ -43,4 +42,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk.mk)
 # so in this case, we would run 'make PRODUCT-alpha_sdk_addon-sdk_addon'
 PRODUCT_NAME := alpha_sdk_addon
 PRODUCT_DEVICE := alpha
-PRODUCT_MODEL := Marakana Alpha SDK Addon Image for Emulator
+PRODUCT_MODEL := NewCircle Alpha SDK Addon Image for Emulator
