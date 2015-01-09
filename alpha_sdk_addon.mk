@@ -22,7 +22,7 @@ PRODUCT_SDK_ADDON_COPY_MODULES := \
 PRODUCT_SDK_ADDON_STUB_DEFS := $(LOCAL_PATH)/alpha_sdk_addon_stub_defs.txt
 
 # Req'd on Lollipop+, system images are built as a separate package
-PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/sys-img/source.properties
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/sys-img/source.prop_template
 
 # Define the name of the documentation to generate for this add-on's SDK
 PRODUCT_SDK_ADDON_DOC_MODULES := \
