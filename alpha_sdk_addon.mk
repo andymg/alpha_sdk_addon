@@ -9,6 +9,7 @@ PRODUCT_SDK_ADDON_NAME := alpha_sdk_addon
 
 # Copy the following files for this add-on's SDK
 PRODUCT_SDK_ADDON_COPY_FILES := \
+	$(LOCAL_PATH)/source.properties:source.properties \
 	$(LOCAL_PATH)/manifest.ini:manifest.ini \
 	$(LOCAL_PATH)/hardware.ini:hardware.ini \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/skins/MrknHvgaMdpi,skins/MrknHvgaMdpi)
@@ -20,6 +21,9 @@ PRODUCT_SDK_ADDON_COPY_MODULES := \
 	com.marakana.android.service.log:libs/com.marakana.android.service.log.jar
 
 PRODUCT_SDK_ADDON_STUB_DEFS := $(LOCAL_PATH)/alpha_sdk_addon_stub_defs.txt
+
+# Req'd on Lollipop+, system images are built as a separate package
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/sys-img/source.properties
 
 # Define the name of the documentation to generate for this add-on's SDK
 PRODUCT_SDK_ADDON_DOC_MODULES := \
