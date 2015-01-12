@@ -14,7 +14,7 @@ PRODUCT_SDK_ADDON_COPY_FILES := \
 	$(LOCAL_PATH)/hardware.ini:hardware.ini
 
 # The add-on system image doesn't explicitly copy the kernel for us
-PRODUCT_SDK_ADDON_COPY_FILES += $(LOCAL_KERNEL):images/armeabi-v7a/kernel-qemu
+PRODUCT_SDK_ADDON_COPY_FILES += $(LOCAL_KERNEL):images/x86_64/kernel-qemu
 
 # Copy the jar files for the libraries (APIs) exposed in this add-on's SDK
 PRODUCT_SDK_ADDON_COPY_MODULES := \
