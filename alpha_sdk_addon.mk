@@ -13,6 +13,8 @@ PRODUCT_SDK_ADDON_COPY_FILES := \
 	$(LOCAL_PATH)/manifest.ini:manifest.ini \
 	$(LOCAL_PATH)/hardware.ini:hardware.ini
 
+# The add-on system image doesn't explicitly copy the kernel for us
+PRODUCT_SDK_ADDON_COPY_FILES += $(LOCAL_KERNEL):images/armeabi-v7a/kernel-qemu
 
 # Copy the jar files for the libraries (APIs) exposed in this add-on's SDK
 PRODUCT_SDK_ADDON_COPY_MODULES := \
@@ -27,9 +29,6 @@ PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/sys-img/source.prop_templ
 # Define the name of the documentation to generate for this add-on's SDK
 PRODUCT_SDK_ADDON_DOC_MODULES := \
 	com.marakana.android.service.log_doc 
-
-# Since the add-on is an emulator, we also need to explicitly copy the kernel to images
-PRODUCT_SDK_ADDON_COPY_FILES += $(LOCAL_KERNEL):images/armeabi-v7a/kernel-qemu
 
 # Define a config file for the emulated acceleration
 BOARD_EGL_CFG := device/generic/goldfish/opengl/system/egl/egl.cfg
