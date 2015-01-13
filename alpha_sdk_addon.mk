@@ -34,7 +34,7 @@ PRODUCT_SDK_ADDON_DOC_MODULES := \
 BOARD_EGL_CFG := device/generic/goldfish/opengl/system/egl/egl.cfg
 
 # This add-on extends the default sdk product.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/sdk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_x86.mk)
 
 # The name of this add-on (for the build system)
 # Use 'make PRODUCT-<PRODUCT_NAME>-sdk_addon' to build the an add-on, 
